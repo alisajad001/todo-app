@@ -1,6 +1,7 @@
 let inputValue = document.querySelector('input');
 const addBtn = document.querySelector('.addBtn');
 let todos = document.querySelector('#todos');
+const circleEl = document.querySelector('.circle');
 
 function addTodo() {
     // Creates new (li) element
@@ -17,6 +18,8 @@ function addTodo() {
     if (inputValue.value) {
         newTodoLi.appendChild(newRemoveBtn);
         todos.append(newTodoLi);
+        circleEl.style.display = 'block';
+        todos.style.display = 'block';
     } else{
         alert('Add a title');
     }
