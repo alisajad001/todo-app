@@ -10,7 +10,6 @@ const Todo = ({ todo, todos, setTodos }) => {
         : todo;
     });
     setTodos(newTodos);
-    console.log(todoName.completed);
   };
   return (
     <div className="flex justify-between items-center p-3 py-5 bg-blue-100 shadow-md rounded-md">
