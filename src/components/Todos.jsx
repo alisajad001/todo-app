@@ -1,22 +1,14 @@
 import React from "react";
 import Todo from "./Todo";
 
-const Todos = () => {
+const Todos = ({ todos }) => {
   return (
     <div className="p-3 flex flex-col gap-4 mb-14">
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
+      {todos.map((todo, key) => {
+        return <Todo key={key} todo={todo} />;
+      })}
     </div>
   );
-  <Todo />;
 };
 
 export default Todos;

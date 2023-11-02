@@ -1,8 +1,8 @@
 import { FaCirclePlus } from "react-icons/fa6";
 
-const AddBtn = () => {
+const AddBtn = ({ addTodo }) => {
   return (
-    <button>
+    <button onClick={addTodo}>
       <FaCirclePlus className="text-white text-6xl absolute right-6 bottom-6" />
     </button>
   );
