@@ -8,8 +8,8 @@ const App = () => {
 
   return (
     <>
-      <Header setTodos={setTodos} todos={todos} />;
-      <Todos todos={todos} />
+      <Header setTodos={setTodos} todos={todos} />
+      <Todos todos={todos} setTodos={setTodos} />
       <TodosCount />
     </>
   );

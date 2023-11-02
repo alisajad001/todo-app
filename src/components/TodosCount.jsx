@@ -1,5 +1,3 @@
-import React from "react";
-
 const TodosCount = () => {
   return (
     <div className="fixed flex justify-between bg-blue-400 text-white font-semibold bottom-0 w-full p-5">
