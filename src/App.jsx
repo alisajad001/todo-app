@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Header setTodos={setTodos} todos={todos} />
       <Todos todos={todos} setTodos={setTodos} />
-      <TodosCount />
+      <TodosCount todos={todos} />
     </>
   );
 };
