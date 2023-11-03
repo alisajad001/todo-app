@@ -4,6 +4,10 @@ import { AppContext } from "../App";
 
 const Todos = () => {
   const { todos } = useContext(AppContext);
+
+  const sortedTodos = todos
+    .slice()
+    .sort((a, b) => Number(a.completed) - Number(b.completed));
   return (
     <div className="p-5 flex flex-col gap-4 mb-20">
       {todos.length === 0 ? (
@@ -18,7 +22,7 @@ const Todos = () => {
           </p>
         </>
       ) : (
-        todos.map((todoItem, key) => {
+        sortedTodos.map((todoItem, key) => {
           return <Todo key={key} todoItem={todoItem} />;
         })
       )}
