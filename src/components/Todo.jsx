@@ -10,9 +10,16 @@ const Todo = ({ todo, todos, setTodos }) => {
         : todo;
     });
     setTodos(newTodos);
+    isCompleted = true;
   };
   return (
-    <div className="flex justify-between items-center p-3 py-5 bg-blue-100 shadow-md rounded-md">
+    <div
+      className={
+        todo.completed
+          ? "flex justify-between items-center p-3 py-5 bg-green-200 border border-green-400 shadow-md rounded-md"
+          : "flex justify-between items-center p-3 py-5 bg-blue-100 shadow-md rounded-md"
+      }
+    >
       <h3 className="text-gray-700">{todo.name}</h3>
 
       <button onClick={() => completeTodo(todo)}>
